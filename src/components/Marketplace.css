@@ -1,0 +1,26 @@
+.intro_container {
+    width: 50%;
+    padding: 10%;
+    background: #F5F5F5;
+}
+
+.getstarted_img {
+    width: 50%;
+}
+
+.Welcome {
+    text-align: center;
+}
+
+.Card_grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Card_grid img {
+    width: 320px;
+    height: 243px;
+    margin-inline: auto;
+}

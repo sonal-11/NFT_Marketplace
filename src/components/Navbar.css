@@ -1,0 +1,19 @@
+.Logo {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.alchemy {
+    /* flex items-end ml-5 pb-2 */
+    display: flex;
+}
+
+.li-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 2px;
+}
