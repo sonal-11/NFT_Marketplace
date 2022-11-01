@@ -12,6 +12,11 @@ import WhatNFT from '../Images/what-is-ethereum.png';
 import impact_transparent from '../Images/impact_transparent.png'
 import future_transp from '../Images/future_transparent.jpg'
 import infra_transp from '../Images/infrastructure_transparent.jpg'
+import ethe from '../Images/eth.png'
+import wallet from '../Images/wallet-cropped.png'
+import developer from '../Images/developers-eth-blocks.png'
+import merge from '../Images/merge.png'
+import finance from '../Images/finance_transparent.png'
 
 export default function Marketplace() {
 const sampleData = [
@@ -89,23 +94,21 @@ if(!dataFetched)
 return (
     <div>
         <Navbar></Navbar>
-        <div className="flex flex-col place-items-center mt-20">
+        <div className="flex flex-col place-items-center mt-5">
         <div>
-            <img src={MainImg}>
-
-            </img>
+            <img alt="" src={MainImg}></img>
             <div className="Welcome">
             <div style={{width: '30%', marginInline: 'auto'}} className="md:text-xl mt-5 flex flex-col place-items-center font-bold">
-              <h1>Welcome To NFT Marketplace</h1>
-              <p>NFT is the community-run technology powering the cryptocurrency ether (ETH) and thousands of decentralized applications.</p>
+              <h1 className="wetxt">Welcome To NFT Marketplace</h1>
+              <p className="semi_txt">NFT is the community-run technology powering the cryptocurrency ether (ETH) and thousands of decentralized applications.</p>
             </div>
             </div>
-            <div style={{display: 'flex', marginTop: '10%'}}>
+            <div style={{display: 'flex', marginTop: '5%'}}>
                 <div className="intro_container">
-                  <h1>Get Started</h1>
-                  <p>ethereum.org is your portal into the world of Ethereum. The tech is new and ever-evolving – it helps to have a guide. Here's what we recommend you do if you want to dive in.</p>
+                  <h1 className="wetxt">Get Started</h1>
+                  <p className="semi_txt">ethereum.org is your portal into the world of Ethereum. The tech is new and ever-evolving – it helps to have a guide. Here's what we recommend you do if you want to dive in.</p>
                 </div>
-                <img className="getstarted_img" src={GetStartImg}></img>
+                <img alt="" className="getstarted_img" src={GetStartImg}></img>
             </div>
         </div>
             <div className="md:text-xl mt-5 font-bold">
@@ -118,54 +121,64 @@ return (
             </div>
 
             <div className="Card_grid">
-                <Cards img={CardImg} heading='Pick a Wallet' info='A wallet lets you connect..........' onClick={()=>{
+                <Cards img={CardImg} heading='Pick a Wallet' info='A wallet lets you connect to Ethereum and manage your funds.' onClick={()=>{
                     nav('https://ethereum.org/en/wallets/find-wallet/')
                 }} >
                 </Cards>
-                <Cards></Cards>
-                <Cards></Cards>
-                <Cards></Cards>
+                <Cards img={ethe} heading='Get ETH' info='ETH is the currency of Ethereum - you can use it in applications.'></Cards>
+                <Cards img={wallet} heading='Use a dapp' info='Dapps are applications powered by Ethereum. See what you can do.'></Cards>
+                <Cards img={developer} heading='Start building' info='If you want to start coding with Ethereum, we have documentation, tutorials, and more in our developer portal'></Cards>
             </div>
 
-            <div style={{display: 'flex', marginTop: '200px'}}>
-            <img style={{padding: '5px', margin: '10px'}} className="getstarted_img" src={WhatNFT}></img>
+            <div style={{display: 'flex', marginTop: '200px',backgroundColor: '#ccfcff'}}>
+            <img alt="" style={{padding: '5px', margin: '10px'}} className="getstarted_img" src={WhatNFT}></img>
             <div className="intro_container">
-                <h1>What is NFT Marketplace</h1>
-                <p>Ethereum is a technology that's home to digital money, global payments, and applications. The community has built a booming digital economy, bold new ways for creators to earn online, and so much more. It's open to everyone, wherever you are in the world – all you need is the internet.</p>
-            </div>
-            </div>
-
-            <div style={{display: 'flex'}}>
-            <div className="intro_container">
-                <h1>A fairer financial system</h1>
-                <p>Today, billions of people can’t open bank accounts, others have their payments blocked. Ethereum's decentralized finance (DeFi) system never sleeps or discriminates. With just an internet connection, you can send, receive, borrow, earn interest, and even stream funds anywhere in the world.</p>
-            </div>
-            <img className="getstarted_img" src={impact_transparent}></img>
-            </div>
-
-            <div style={{display: 'flex'}}>
-            <img className="getstarted_img" src={infra_transp}></img>
-            <div className="intro_container">
-                <h1>The internet of assets</h1>
-                <p>Ethereum isn't just for digital money. Anything you can own can be represented, traded and put to use as non-fungible tokens (NFTs). You can tokenise your art and get royalties automatically every time it's re-sold. Or use a token for something you own to take out a loan. The possibilities are growing all the time.</p>
+                <h1 className="wetxt">What is NFT Marketplace</h1>
+                <p className="semi_txt">
+                    Ethereum is a technology that's home to digital money, global payments, and applications. The community has built a booming digital economy, bold new ways for creators to earn online, and so much more. It's open to everyone, wherever you are in the world – all you need is the internet.  
+                </p>
+                <button className="share_btn">What is Ethereum?</button>
             </div>
             </div>
 
-            <div style={{display: 'flex'}}>
+            <div style={{display: 'flex', backgroundColor: '#ffe3d3'}}>
             <div className="intro_container">
-                <h1>An open internet</h1>
-                <p>Today, we gain access to 'free' internet services by giving up control of our personal data. Ethereum services are open by default – you just need a wallet. These are free and easy to set up, controlled by you, and work without any personal info.</p>
+                <h1 className="wetxt">A fairer financial system</h1>
+                <p className="semi_txt">Today, billions of people can’t open bank accounts, others have their payments blocked. Ethereum's decentralized finance (DeFi) system never sleeps or discriminates. With just an internet connection, you can send, receive, borrow, earn interest, and even stream funds anywhere in the world.</p>
             </div>
-            <img className="getstarted_img" src={future_transp}></img>
+            <img alt="" className="getstarted_img" src={impact_transparent}></img>
+            </div>
+
+            <div style={{display: 'flex', backgroundColor: '#ccfcff'}}>
+            <img alt="" className="getstarted_img" src={infra_transp}></img>
+            <div className="intro_container">
+                <h1 className="wetxt">The internet of assets</h1>
+                <p className="semi_txt">Ethereum isn't just for digital money. Anything you can own can be represented, traded and put to use as non-fungible tokens (NFTs). You can tokenise your art and get royalties automatically every time it's re-sold. Or use a token for something you own to take out a loan. The possibilities are growing all the time.</p>
+            </div>
+            </div>
+
+            <div style={{display: 'flex', backgroundColor: '#ffe3d3'}}>
+            <div className="intro_container">
+                <h1 className="wetxt">An open internet</h1>
+                <p className="semi_txt">Today, we gain access to 'free' internet services by giving up control of our personal data. Ethereum services are open by default – you just need a wallet. These are free and easy to set up, controlled by you, and work without any personal info.</p>
+            </div>
+            <img alt="" className="getstarted_img" src={future_transp}></img>
             </div>
 
             <div className="mt-10">
-                <h1>Explore NFT Marketplace</h1>
+                <h1 className="wetxt">Explore NFT Marketplace</h1>
 
                 <div className="Card_grid">
-                  <Cards></Cards>
-                  <Cards></Cards>
+                  <Cards img={merge} heading='Level up your knowledge' info='The NFT Marketplace roadmap consists of interconnected upgrades designed to make the network more scalable, secure, and sustainale'></Cards>
+                  <Cards img={infra_transp} heading='NFT Marketplace for enterprise' info='See how Ethereum can open up new buisness models, reduce your costs and future-proof your business'></Cards>
                 </div>
+            </div>
+
+            <div style={{display: 'flex', backgroundColor: '#DEE7FB', margin: '100px'}}>
+              <div className="intro_container">
+                  <h1 className="wetxt">This website is open source with hundreds of community contributors. You can propose edits to any of the content on this site, suggest awesome new features, or help us squash bugs.</h1>
+              </div>
+              <img className="getstarted_img" alt="" src={finance}></img>
             </div>
         </div>   
 
